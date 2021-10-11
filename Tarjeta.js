@@ -1,20 +1,32 @@
-import Personaje from "./Personaje.js";
+import Luchador from "./Luchador.js";
+import Rey from "./Rey.js";
+import Asesor from "./Asesor.js";
+import Escudero from "./Escudero.js";
 
 class Tarjeta {
   constructor(arrayPersonajes) {
     for (let i = 0; i < arrayPersonajes.length; i++) {
+      let datosMiClase;
+      //let vivo;
 
-      if(arrayPersonajes[i].fraseClase === "Vais a morir todos hijos de mil ****S!")
-      {datosMiClase = `<li>Años de reinado: ${arrayPersonajes[i].reinado}</li>`}
-      if(arrayPersonajes[i].fraseClase === "Vais a morir todos hijos de mil ****S!")
-      {datosMiClase = `<li>Años de reinado: ${arrayPersonajes[i].reinado}</li>`}
-       
-                <li>Arma: XXX</li>
-                <li>Destreza: X</li>
-                <li>Peloteo: X</li>
-                <li>Asesora a: X</li>
-                <li>Sirve a: X</li>
-      document.querySelector(".characters-list").insertAdjacentHTML(
+      if (arrayPersonajes[i] instanceof Rey) {
+        datosMiClase = `<li>Años de reinado: ${arrayPersonajes[i].reinado}</li>`;
+      }
+      if (arrayPersonajes[i] instanceof Luchador) {
+        datosMiClase = `<li>Arma: ${arrayPersonajes[i].arma}</li>
+      <li>Destreza: ${arrayPersonajes[i].destreza}</li>`;
+      }
+      if (arrayPersonajes[i] instanceof Escudero) {
+        datosMiClase = `<li>Peloteo: ${arrayPersonajes[i].pelotismo}</li>
+       <li>Sirve a: ${arrayPersonajes[i].boss.name}</li>`;
+      }
+      if (arrayPersonajes[i] instanceof Asesor) {
+        datosMiClase = `<li>Asesora a: ${arrayPersonajes[i].asesorado.name}</li>`;
+      }
+
+      //vivo = arrayPersonajes[i].vivo;
+
+      document.querySelector("#board").insertAdjacentHTML(
         "beforeend",
         `<ul class="characters-list row list-unstyled">
       <li class="character col">
@@ -38,8 +50,7 @@ class Tarjeta {
             </div>
             <div class="character__overlay">
               <ul class="list-unstyled"> ${datosMiClase}
-               
-              </ul>
+               </ul>
               <div class="character__actions">
                 <button class="character__action btn">habla</button>
                 <button class="character__action btn">muere</button>
@@ -56,5 +67,3 @@ class Tarjeta {
 }
 
 export default Tarjeta;
-
-characters - list;
