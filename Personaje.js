@@ -23,3 +23,5 @@ class Personaje {
     this.vivo = false;
   }
 }
+
+export default Personaje;
