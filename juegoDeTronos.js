@@ -8,7 +8,7 @@ import Tarjeta from "./Tarjeta.js";
 const joffrey = new Rey("Joffrey", Personaje.familia.arryn, 17, 2);
 const jaime = new Luchador("Jaime", Personaje.familia.stark, 30, "AK-47", 7);
 const daenerys = new Luchador("Daenerys", Personaje.familia.stark, 20, "AK", 7);
-const tyrion = new Asesor("Tyirion", Personaje.familia.stark, 28, daenerys);
+const tyrion = new Asesor("Tyrion", Personaje.familia.stark, 28, daenerys);
 const bronn = new Escudero("Bronn", Personaje.familia.stark, 28, jaime, 7);
 
 const personajes = [joffrey, jaime, daenerys, tyrion, bronn];
@@ -16,7 +16,7 @@ const personajes = [joffrey, jaime, daenerys, tyrion, bronn];
 
 const comunicados = personajes
   .filter((personaje) => personaje instanceof Luchador)
-  .map((personaje) => personaje.comunicar());
+  .map((personaje) => personaje.comunica());
 
 /*console.log(joffrey.serie);
 comunicados.forEach((mensaje) => console.log(mensaje));
@@ -27,9 +27,9 @@ tyrion.morir();
 console.log(`Jaime vivo ? ${jaime.vivo}`);
 console.log(`Tyirion vivo ? ${tyrion.vivo}`);*/
 
-//const tarjeta = new Tarjeta(personajes);
+const tarjeta = new Tarjeta(personajes);
 
-function test(personajes) {
+/*function test(arrayPersonajes) {
   for (let i = 0; i < arrayPersonajes.length; i++) {
     let datosMiClase;
     //let vivo;
@@ -92,4 +92,4 @@ function test(personajes) {
   }
 }
 
-test(personajes);
+test(personajes);*/

@@ -7,7 +7,7 @@ class Asesor extends Personaje {
   asesorado;
   constructor(nombre, familia, edad, asesorado) {
     super(nombre, familia, edad);
-    this.asesorado = weapon;
+    this.asesorado = asesorado;
     this.fraseClase = "No sé por qué, pero creo que voy a morir pronto";
     if (
       asesorado instanceof Rey ||

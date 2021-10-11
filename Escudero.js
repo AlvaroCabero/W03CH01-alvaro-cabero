@@ -4,7 +4,7 @@ import Personaje from "./Personaje.js";
 class Escudero extends Personaje {
   boss;
   pelotismo;
-  constructor(nombre, familia, edad, pelotismo, boss) {
+  constructor(nombre, familia, edad, boss, pelotismo) {
     super(nombre, familia, edad);
     this.pelotismo = pelotismo;
     this.fraseClase = "Soy un loser";
