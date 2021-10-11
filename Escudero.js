@@ -1,21 +1,21 @@
-
 import Luchador from "./Luchador.js";
 import Personaje from "./Personaje.js";
 
-class Escudero extends Personaje{
+class Escudero extends Personaje {
   boss;
   pelotismo;
-  constructor(pelotismo,boss ){
-  super(nombre, familia, edad);
+  constructor(nombre, familia, edad, pelotismo, boss) {
+    super(nombre, familia, edad);
     this.pelotismo = pelotismo;
     this.fraseClase = "Soy un loser";
-   
-   if (boss instanceof (Luchador)) 
-   {this.boss = boss;}
-     
+
+    if (boss instanceof Luchador) {
+      this.boss = boss;
+    }
   }
-comunica(){
-  return this.fraseClase;
+  comunica() {
+    return this.fraseClase;
+  }
 }
 
 export default Escudero;
