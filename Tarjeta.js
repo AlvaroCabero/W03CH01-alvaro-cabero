@@ -30,8 +30,7 @@ class Tarjeta {
 
       document.querySelector(".characters-list").insertAdjacentHTML(
         "beforeend",
-        `<ul class="characters-list row list-unstyled">
-      <li class="character col">
+        `<li class="character col">
         <div class="card character__card">
           <img
             src="/img/${arrayPersonajes[i].nombre.toLowerCase()}.jpg"
@@ -41,7 +40,9 @@ class Tarjeta {
           <div class="card-body">
             <h2 class="character__name card-title h4">${
               arrayPersonajes[i].nombre
-            } y ${arrayPersonajes[i].familia}</h2>
+            } <span className="character__family">${
+          arrayPersonajes[i].familia
+        }</span></h2>
             <div class="character__info">
               <ul class="list-unstyled">
                 <li>Edad: ${arrayPersonajes[i].edad}</li>
@@ -63,8 +64,7 @@ class Tarjeta {
           </div>
           <i class="emoji"></i>
         </div>
-      </li>
-    </ul>;`
+      </li>`
       );
     }
   }
