@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/AlvaroCabero/W03CH01-alvaro-cabero#readme",
   "devDependencies": {
+    "@babel/eslint-parser": "^7.15.8",
     "sass": "^1.42.1"
   }
 }
