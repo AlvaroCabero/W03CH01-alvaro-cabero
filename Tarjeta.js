@@ -26,18 +26,22 @@ class Tarjeta {
 
       //vivo = arrayPersonajes[i].vivo;
 
-      document.querySelector("#board").insertAdjacentHTML(
+      console.log(arrayPersonajes[i].nombre.toLowerCase());
+
+      document.querySelector(".characters-list").insertAdjacentHTML(
         "beforeend",
         `<ul class="characters-list row list-unstyled">
       <li class="character col">
         <div class="card character__card">
           <img
-            src="${arrayPersonajes[i].nombre}.jpg"
+            src="/img/${arrayPersonajes[i].nombre.toLowerCase()}.jpg"
             alt="Nombre y familia del personaje"
             class="character__picture card-img-top"
           />
           <div class="card-body">
-            <h2 class="character__name card-title h4">${arrayPersonajes[i].nombre} y ${arrayPersonajes[i].familia}</h2>
+            <h2 class="character__name card-title h4">${
+              arrayPersonajes[i].nombre
+            } y ${arrayPersonajes[i].familia}</h2>
             <div class="character__info">
               <ul class="list-unstyled">
                 <li>Edad: ${arrayPersonajes[i].edad}</li>
