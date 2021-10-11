@@ -1,0 +1,23 @@
+{
+  "name": "w03ch01-alvaro-cabero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch styles.scss src/styles.css",
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlvaroCabero/W03CH01-alvaro-cabero.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlvaroCabero/W03CH01-alvaro-cabero/issues"
+  },
+  "homepage": "https://github.com/AlvaroCabero/W03CH01-alvaro-cabero#readme",
+  "devDependencies": {
+    "sass": "^1.42.1"
+  }
+}
