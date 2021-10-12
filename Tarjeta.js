@@ -18,10 +18,14 @@ class Tarjeta {
       }
       if (arrayPersonajes[i] instanceof Escudero) {
         datosMiClase = `<li>Peloteo: ${arrayPersonajes[i].pelotismo}</li>
-       <li>Sirve a: ${arrayPersonajes[i].boss.name}</li>`;
+       <li>Sirve a: ${
+         /*arrayPersonajes.find(
+           (personaje) => personaje.nombre === arrayPersonajes[i].boss
+         )*/ arrayPersonajes[i].boss.nombre
+       }</li>`;
       }
       if (arrayPersonajes[i] instanceof Asesor) {
-        datosMiClase = `<li>Asesora a: ${arrayPersonajes[i].asesorado.name}</li>`;
+        datosMiClase = `<li>Asesora a: ${arrayPersonajes[i].asesorado.nombre}</li>`;
       }
 
       //vivo = arrayPersonajes[i].vivo;
