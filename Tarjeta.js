@@ -8,15 +8,16 @@ class Tarjeta {
   parentElement;
   constructor(
     arrayPersonajes,
-    parentElement,
-    className,
-    tag,
+    parentElement = document.querySelector(".characters-list"),
+    className = "div",
+    tag = ".characters-list",
     { nombre, familia, edad }
   ) {
     this.element = document.querySelector(tag);
     this.element.className = className;
     this.parentElement = parentElement;
     this.parentElement.append(this.element);
+
     generateHTML(arrayPersonajes, nombre, familia, edad);
   }
 

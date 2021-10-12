@@ -19,19 +19,12 @@ const comunicados = personajes
   .map((personaje) => personaje.comunica());
 
 //const tarjeta = new Tarjeta(personajes);
-parentElement = document.querySelector();
-className = 
-tag = "div";
-
-for (let i=0; i < personajes.length){
 
 const tarjeta = new Tarjeta(personajes, parentElement, className, tag, {
-  nombre: ,
+  nombre,
   familia,
   edad,
 });
-
-}
 
 /*function test(arrayPersonajes) {
   for (let i = 0; i < arrayPersonajes.length; i++) {
