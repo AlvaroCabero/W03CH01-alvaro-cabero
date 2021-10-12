@@ -27,6 +27,8 @@ tyrion.morir();
 console.log(`Jaime vivo ? ${jaime.vivo}`);
 console.log(`Tyirion vivo ? ${tyrion.vivo}`);*/
 
+//const tarjeta = new Tarjeta(personajes);
+
 const tarjeta = new Tarjeta(personajes);
 
 /*function test(arrayPersonajes) {
