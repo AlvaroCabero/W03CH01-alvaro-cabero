@@ -1,5 +1,4 @@
 class Personaje {
-  serie = "GoT";
   nombre;
   static familia = {
     greyjoy: "casa greyjoy",
@@ -10,6 +9,7 @@ class Personaje {
   edad;
   vivo = true;
   fraseClase = "Solo sé que no soy nadie";
+  serie = "GoT";
 
   constructor(nombre, familia, edad) {
     this.nombre = nombre;

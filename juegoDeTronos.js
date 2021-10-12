@@ -18,18 +18,20 @@ const comunicados = personajes
   .filter((personaje) => personaje instanceof Luchador)
   .map((personaje) => personaje.comunica());
 
-/*console.log(joffrey.serie);
-comunicados.forEach((mensaje) => console.log(mensaje));
-console.log(`Jaime vivo ? ${jaime.vivo}`);
-console.log(`Tyirion vivo ? ${tyrion.vivo}`);
-jaime.morir();
-tyrion.morir();
-console.log(`Jaime vivo ? ${jaime.vivo}`);
-console.log(`Tyirion vivo ? ${tyrion.vivo}`);*/
-
 //const tarjeta = new Tarjeta(personajes);
+parentElement = document.querySelector();
+className = 
+tag = "div";
 
-const tarjeta = new Tarjeta(personajes);
+for (let i=0; i < personajes.length){
+
+const tarjeta = new Tarjeta(personajes, parentElement, className, tag, {
+  nombre: ,
+  familia,
+  edad,
+});
+
+}
 
 /*function test(arrayPersonajes) {
   for (let i = 0; i < arrayPersonajes.length; i++) {
@@ -95,3 +97,12 @@ const tarjeta = new Tarjeta(personajes);
 }
 
 test(personajes);*/
+
+/*console.log(joffrey.serie);
+comunicados.forEach((mensaje) => console.log(mensaje));
+console.log(`Jaime vivo ? ${jaime.vivo}`);
+console.log(`Tyirion vivo ? ${tyrion.vivo}`);
+jaime.morir();
+tyrion.morir();
+console.log(`Jaime vivo ? ${jaime.vivo}`);
+console.log(`Tyirion vivo ? ${tyrion.vivo}`);*/
