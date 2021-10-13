@@ -2,47 +2,40 @@ import Luchador from "./Luchador.js";
 import Rey from "./Rey.js";
 import Asesor from "./Asesor.js";
 import Escudero from "./Escudero.js";
+import Component from "./Component.js";
 
-class Tarjeta {
-  element;
-  parentElement;
-  constructor(
-    arrayPersonajes,
-    parentElement = document.querySelector(".characters-list"),
-    className = "div",
-    tag = ".characters-list",
-    { nombre, familia, edad }
-  ) {
-    this.element = document.querySelector(tag);
-    this.element.className = className;
-    this.parentElement = parentElement;
-    this.parentElement.append(this.element);
+class Tarjeta extends Component {
+  personajes;
+  constructor(parentElement, className, tag, personajes) {
+    super(parentElement, className, tag);
 
-    generateHTML(arrayPersonajes, nombre, familia, edad);
+    this.personajes = personajes;
+
+    this.generateHTML(this.personajes);
   }
 
-  generateHTML(arrayPersonajes, nombre, familia, edad) {
-    for (let i = 0; i < arrayPersonajes.length; i++) {
+  generateHTML(personajes) {
+    for (let i = 0; i < personajes.length; i++) {
       let datosMiClase;
       //let vivo;
 
-      if (arrayPersonajes[i] instanceof Rey) {
-        datosMiClase = `<li>Años de reinado: ${arrayPersonajes[i].reinado}</li>`;
+      if (personajes[i] instanceof Rey) {
+        datosMiClase = `<li>Años de reinado: ${personajes[i].reinado}</li>`;
       }
-      if (arrayPersonajes[i] instanceof Luchador) {
-        datosMiClase = `<li>Arma: ${arrayPersonajes[i].arma}</li>
-      <li>Destreza: ${arrayPersonajes[i].destreza}</li>`;
+      if (personajes[i] instanceof Luchador) {
+        datosMiClase = `<li>Arma: ${personajes[i].arma}</li>
+      <li>Destreza: ${personajes[i].destreza}</li>`;
       }
-      if (arrayPersonajes[i] instanceof Escudero) {
-        datosMiClase = `<li>Peloteo: ${arrayPersonajes[i].pelotismo}</li>
+      if (personajes[i] instanceof Escudero) {
+        datosMiClase = `<li>Peloteo: ${personajes[i].pelotismo}</li>
        <li>Sirve a: ${
          /*arrayPersonajes.find(
            (personaje) => personaje.nombre === arrayPersonajes[i].boss
-         )*/ arrayPersonajes[i].boss.nombre
+         )*/ personajes[i].boss.nombre
        }</li>`;
       }
-      if (arrayPersonajes[i] instanceof Asesor) {
-        datosMiClase = `<li>Asesora a: ${arrayPersonajes[i].asesorado.nombre}</li>`;
+      if (personajes[i] instanceof Asesor) {
+        datosMiClase = `<li>Asesora a: ${personajes[i].asesorado.nombre}</li>`;
       }
 
       //vivo = arrayPersonajes[i].vivo;

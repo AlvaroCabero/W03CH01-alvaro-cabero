@@ -3,6 +3,7 @@ import Escudero from "./Escudero.js";
 import Luchador from "./Luchador.js";
 import Personaje from "./Personaje.js";
 import Rey from "./Rey.js";
+import Component from "./Component.js";
 import Tarjeta from "./Tarjeta.js";
 
 const joffrey = new Rey("Joffrey", Personaje.familia.arryn, 17, 2);
@@ -20,11 +21,12 @@ const comunicados = personajes
 
 //const tarjeta = new Tarjeta(personajes);
 
-const tarjeta = new Tarjeta(personajes, parentElement, className, tag, {
-  nombre,
-  familia,
-  edad,
-});
+const tarjeta = new Tarjeta(
+  document.querySelector(".characters-list"),
+  ".characters-list",
+  "div",
+  personajes
+);
 
 /*function test(arrayPersonajes) {
   for (let i = 0; i < arrayPersonajes.length; i++) {
