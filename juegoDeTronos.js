@@ -3,6 +3,7 @@ import Escudero from "./Escudero.js";
 import Luchador from "./Luchador.js";
 import Personaje from "./Personaje.js";
 import Rey from "./Rey.js";
+import Component from "./Component.js";
 import Tarjeta from "./Tarjeta.js";
 
 const joffrey = new Rey("Joffrey", Personaje.familia.arryn, 17, 2);
@@ -18,16 +19,14 @@ const comunicados = personajes
   .filter((personaje) => personaje instanceof Luchador)
   .map((personaje) => personaje.comunica());
 
-/*console.log(joffrey.serie);
-comunicados.forEach((mensaje) => console.log(mensaje));
-console.log(`Jaime vivo ? ${jaime.vivo}`);
-console.log(`Tyirion vivo ? ${tyrion.vivo}`);
-jaime.morir();
-tyrion.morir();
-console.log(`Jaime vivo ? ${jaime.vivo}`);
-console.log(`Tyirion vivo ? ${tyrion.vivo}`);*/
+//const tarjeta = new Tarjeta(personajes);
 
-const tarjeta = new Tarjeta(personajes);
+const tarjeta = new Tarjeta(
+  document.querySelector(".characters-list"),
+  ".characters-list",
+  "div",
+  personajes
+);
 
 /*function test(arrayPersonajes) {
   for (let i = 0; i < arrayPersonajes.length; i++) {
@@ -93,3 +92,12 @@ const tarjeta = new Tarjeta(personajes);
 }
 
 test(personajes);*/
+
+/*console.log(joffrey.serie);
+comunicados.forEach((mensaje) => console.log(mensaje));
+console.log(`Jaime vivo ? ${jaime.vivo}`);
+console.log(`Tyirion vivo ? ${tyrion.vivo}`);
+jaime.morir();
+tyrion.morir();
+console.log(`Jaime vivo ? ${jaime.vivo}`);
+console.log(`Tyirion vivo ? ${tyrion.vivo}`);*/
